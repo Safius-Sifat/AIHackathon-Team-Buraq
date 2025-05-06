@@ -1,0 +1,6 @@
+output: lib/ngspice_bindings.dart
+headers:
+  entry-points:
+    - "path/to/ngspice/include/ngspice/sharedspice.h"
+compiler-opts:
+  - "-Ipath/to/ngspice/include"
