@@ -1,16 +1,23 @@
 # main.py
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.responses import JSONResponse, FileResponse
-import cv2
+from fastapi import FastAPI, UploadFile, File, HTTPException, Form
 import google.generativeai as genai
 import numpy as np
 import os
+import io
+import uuid
 from tempfile import NamedTemporaryFile
 from typing import Dict, Any
 from solve import process  # Import your processing function
 from PySpice.Spice.NgSpice.Shared import NgSpiceShared
 from PySpice.Spice.Parser import SpiceParser
 import tempfile
+from PIL import Image
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi import Request
+from typing import Annotated
+
 
 app = FastAPI(
     title="Circuit Diagram Processor",
