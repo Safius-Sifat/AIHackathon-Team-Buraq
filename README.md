@@ -54,8 +54,10 @@
    ```bash
    flutter pub get
    ```
-4. Run the Flutter app on a connected device or emulator:
+4. Change api base url in `api.dart` to your backend url.
+   
+5. Run the Flutter app on a connected device or emulator:
    ```bash
    flutter run
    ```
-5. The app will launch on your device or emulator.
+6. The app will launch on your device or emulator.
